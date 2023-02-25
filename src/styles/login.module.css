@@ -53,3 +53,7 @@ h1 {
     min-height: 1rem;
 }
 
+.login_menu span {
+    color: rgb(189, 0, 0);
+}
+
