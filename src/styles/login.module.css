@@ -1,5 +1,5 @@
 * {
-    font-family:sans-serif, 'Segoe UI', Tahoma, Geneva, Verdana;
+    font-family: sans-serif, "Segoe UI", Tahoma, Geneva, Verdana;
 }
 
 .login_wrapper {
@@ -24,7 +24,7 @@ h1 {
     max-height: 400px;
     min-width: 350px;
     margin: 10rem auto;
-    border-radius: .25rem;
+    border-radius: 0.25rem;
     text-align: center;
 }
 
@@ -56,4 +56,3 @@ h1 {
 .login_menu span {
     color: rgb(189, 0, 0);
 }
-
