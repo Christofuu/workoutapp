@@ -1,30 +1,33 @@
+require('dotenv').config();
 const express = require("express");
 const app = express();
 const session = require("express-session");
 const MongoDBStore = require("connect-mongodb-session")(session);
 const mongoose = require("mongoose");
 const userRouter = require("./routes/users");
+const { PORT, HOST } = process.env;
+
 
 // Constants
-const {
-  HOST,
-  PORT,
-  SESS_SECRET,
-  NODE_ENV,
-  IS_PROD,
-  COOKIE_NAME,
-  MONGO_URI
-} = require("./config/config.js");
+// const {
+//   HOST,
+//   PORT,
+//   SESS_SECRET,
+//   NODE_ENV,
+//   IS_PROD,
+//   COOKIE_NAME,
+//   MONGO_URI
+// } = require("./config/config.js");
 const MAX_AGE = 1000 * 60 * 60 * 3; 
 
-mongoose.connect(MONGO_URI, {
+mongoose.connect(process.env.MONGO_URI, {
   useNewUrlParser: true
 })
   .then(() => console.log("MongoDB Connected"))
   .catch((err) => console.log(err));
 
 const mongoDBStore = new MongoDBStore({
-  uri: MONGO_URI,
+  uri: process.env.MONGO_URI,
   collection: "mySessions"
 });
 
