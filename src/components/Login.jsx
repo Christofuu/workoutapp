@@ -139,8 +139,9 @@ export default function Login() {
             ) : (
                 <div className={styles.login_menu}>
                     <h2>Login</h2>
+                    <h3>choose a sign in method to continue...</h3>
                     <form onSubmit={submitHandler}>
-                        <label>Username:</label>
+                        <label>Email:</label>
                         <input
                             type="text"
                             name="username"
